@@ -52,7 +52,7 @@ router.put("/:id", (req, res) => {
 router.delete("/:id", (req, res) => {
   Book.findByIdAndRemove(req.params.id, req.body)
     .then(() => res.json({ mgs: "Book entry deleted successfully" }))
-    .catch(() => res.status(404).json({ error: "No such a book" }));
+    .catch(() => res.status(404).json({ error: "No such book" }));
 });
 
 module.exports = router;
